@@ -1,0 +1,48 @@
+name: Track npm release
+
+# Mengecek registry.npmjs.com secara berkala untuk versi baru dari paket
+# yang dikonfigurasi, lalu menyimpan cache-nya ke data/versions.json.
+# Workflow ini HANYA membaca metadata publik npm — tidak mengunduh atau
+# menjalankan kode dari paket tersebut, dan tidak mem-publish apa pun.
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # setiap 6 jam
+  workflow_dispatch: {}       # bisa dipicu manual dari tab Actions
+  push:
+    branches: [main]
+    paths:
+      - "scripts/fetch-versions.js"
+      - ".github/workflows/track-release.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js v24
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+
+      - name: Fetch latest version metadata from npm registry
+        run: node scripts/fetch-versions.js
+        env:
+          NPM_PACKAGE: "@xayz/baileys"
+
+      - name: Commit updated versions.json (if changed)
+        run: |
+          git config user.name "xayz-web-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet -- data/versions.json; then
+            echo "Tidak ada versi baru."
+          else
+            git add data/versions.json
+            git commit -m "chore: update tracked npm versions [skip ci]"
+            git push
+          fi
