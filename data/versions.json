@@ -1,0 +1,7 @@
+{
+  "package": "@xayz/baileys",
+  "latest": null,
+  "fetchedAt": null,
+  "versions": [],
+  "note": "Berkas ini diperbarui otomatis oleh .github/workflows/track-release.yml melalui scripts/fetch-versions.js. Halaman utama (index.html) tetap mengambil data langsung dari registry.npmjs.com secara live; berkas ini hanya cache cadangan."
+}
