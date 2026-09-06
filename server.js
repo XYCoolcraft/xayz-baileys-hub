@@ -18,7 +18,7 @@ const http = require("node:http");
 const fs = require("node:fs");
 const path = require("node:path");
 
-const ROOT = __dirname;
+const ROOT = path.join(__dirname, "index.html"); // Ganti "public" dengan nama folder HTML Anda
 const PORT = Number(process.env.PORT) || 3000;
 const HOST = process.env.HOST || "0.0.0.0";
 
