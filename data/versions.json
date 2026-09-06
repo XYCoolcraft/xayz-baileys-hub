@@ -1,7 +1,97 @@
 {
   "package": "@xayz/baileys",
-  "latest": null,
-  "fetchedAt": null,
-  "versions": [],
-  "note": "Berkas ini diperbarui otomatis oleh .github/workflows/track-release.yml melalui scripts/fetch-versions.js. Halaman utama (index.html) tetap mengambil data langsung dari registry.npmjs.com secara live; berkas ini hanya cache cadangan."
+  "latest": "6.1.0",
+  "fetchedAt": "2026-09-06T15:00:20.712Z",
+  "versions": [
+    {
+      "version": "6.1.0",
+      "date": "2026-09-06T03:03:30.197Z",
+      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.1.0.tgz",
+      "shasum": "24ac78e75444e3a006bdd5a706ff81a41638d23a"
+    },
+    {
+      "version": "6.0.75",
+      "date": "2026-09-04T23:52:22.846Z",
+      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.0.75.tgz",
+      "shasum": "6823e1c74d019976b19cbaae33f1c2609c1b45ff"
+    },
+    {
+      "version": "6.0.7",
+      "date": "2026-09-03T22:26:16.638Z",
+      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.0.7.tgz",
+      "shasum": "0fe061914efc6869fbe26bf123fbcbf3dc86f54e"
+    },
+    {
+      "version": "6.0.6",
+      "date": "2026-09-03T00:42:27.635Z",
+      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.0.6.tgz",
+      "shasum": "f5c052032c67e2369c0bbe8ade8c9cd76af18ddf"
+    },
+    {
+      "version": "6.0.5",
+      "date": "2026-09-01T12:42:03.219Z",
+      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.0.5.tgz",
+      "shasum": "24ce0564b4c87caa2d6bbaf8a4d973c7e5ae4300"
+    },
+    {
+      "version": "6.0.4",
+      "date": "2026-08-29T20:57:39.646Z",
+      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.0.4.tgz",
+      "shasum": "277e827a222aed8f539a8ee7795c12bac619c030"
+    },
+    {
+      "version": "6.0.3",
+      "date": "2026-08-29T14:14:06.997Z",
+      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.0.3.tgz",
+      "shasum": "5cf3a030709218d06397ff1db80467a7bee8e726"
+    },
+    {
+      "version": "6.0.2",
+      "date": "2026-08-27T12:44:15.793Z",
+      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.0.2.tgz",
+      "shasum": "6bb1715cccf7b1925b5fb5d74ced89b8bcaffeab"
+    },
+    {
+      "version": "6.0.1",
+      "date": "2026-08-27T11:29:38.410Z",
+      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.0.1.tgz",
+      "shasum": "0c8d1d8ffa9e9f987901f0fab7479fcf572767d7"
+    },
+    {
+      "version": "6.0.0",
+      "date": "2026-08-16T11:19:46.486Z",
+      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.0.0.tgz",
+      "shasum": "d6c8aa74facf6e069129e77f43e89c9833b3d42c"
+    },
+    {
+      "version": "5.0.0",
+      "date": "2026-08-16T10:47:47.831Z",
+      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-5.0.0.tgz",
+      "shasum": "c5533b23f314452adfd7f67f80559b5ce98e27cd"
+    },
+    {
+      "version": "4.0.0",
+      "date": "2026-08-16T10:39:25.180Z",
+      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-4.0.0.tgz",
+      "shasum": "d3868a470ec8ea9a1d4751453ea7396f95e0f645"
+    },
+    {
+      "version": "3.0.0",
+      "date": "2026-08-16T07:54:54.312Z",
+      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-3.0.0.tgz",
+      "shasum": "ab4fdb0bc070be3197f1d63429f49c7d568107a5"
+    },
+    {
+      "version": "2.0.0",
+      "date": "2026-08-16T07:52:06.518Z",
+      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-2.0.0.tgz",
+      "shasum": "ce6f268b71aad8bc3658fd26bf12059a9d0144ba"
+    },
+    {
+      "version": "1.0.0",
+      "date": "2026-08-16T07:15:18.973Z",
+      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-1.0.0.tgz",
+      "shasum": "0f578f663d729bf3898df91953d900e806af352a"
+    }
+  ]
 }
