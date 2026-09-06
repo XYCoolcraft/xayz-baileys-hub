@@ -1,0 +1,5 @@
+node_modules/
+@xayz/
+*.log
+.DS_Store
+.vercel
