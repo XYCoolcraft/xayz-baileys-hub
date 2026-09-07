@@ -1,5 +1,7 @@
 node_modules/
-@xayz/
 *.log
 .DS_Store
 .vercel
+# Catatan: folder rilis terekstrak (mis. "@xayz/baileys/") SENGAJA tidak
+# di-gitignore — folder itu memang harus ter-commit supaya panel "Rilis
+# terekstrak" di situs & tombol "Open in GitHub" per versi berfungsi.

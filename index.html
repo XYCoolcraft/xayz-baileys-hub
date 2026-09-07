@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+<link rel="stylesheet" href="assets/vendor/highlightjs/atom-one-dark.min.css">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -25,8 +25,8 @@
     <nav class="topnav">
       <a href="#releases">Rilis</a>
       <a href="#browser">Kode</a>
-      <a href="#deploy">Deploy</a>
       <a href="#console">Console</a>
+      <a href="#faq">Info</a>
     </nav>
     <a class="btn btn--ghost" id="btn-edit-publish" href="#" data-repo="XYCoolcraft/baileys">
       Edit &amp; Publish
@@ -39,25 +39,30 @@
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="hero__inner">
-      <p class="hero__eyebrow">Perpustakaan WhatsApp Web tanpa browser</p>
-      <h1 class="hero__title">
-        Satu socket.<br>
-        Semua percakapan WhatsApp Anda.
-      </h1>
-      <p class="hero__lede">
-        <code>@xayz/baileys</code> menyambungkan aplikasi Anda langsung ke WhatsApp Web lewat
-        WebSocket — tanpa Selenium, tanpa Chromium, tanpa beban ekstra. Unduh versi yang Anda
-        butuhkan, baca sumbernya, lalu terbitkan revisi Anda sendiri kapan pun siap.
-      </p>
-      <div class="hero__cta">
-        <a href="#releases" class="btn btn--primary">Lihat semua rilis</a>
-        <a href="#browser" class="btn btn--outline">Jelajahi kode</a>
+      <div class="hero__copy">
+        <p class="hero__eyebrow">Perpustakaan WhatsApp Web tanpa browser</p>
+        <h1 class="hero__title">
+          Satu socket.<br>
+          Semua percakapan WhatsApp Anda.
+        </h1>
+        <p class="hero__lede">
+          <code>@xayz/baileys</code> menyambungkan aplikasi Anda langsung ke WhatsApp Web lewat
+          WebSocket — tanpa Selenium, tanpa Chromium, tanpa beban ekstra. Unduh versi yang Anda
+          butuhkan, baca sumbernya, lalu terbitkan revisi Anda sendiri kapan pun siap.
+        </p>
+        <div class="hero__cta">
+          <a href="#releases" class="btn btn--primary">Lihat semua rilis</a>
+          <a href="#browser" class="btn btn--outline">Jelajahi kode</a>
+        </div>
+        <dl class="hero__stats" id="hero-stats">
+          <div><dt>Versi terbaru</dt><dd id="stat-latest">memuat…</dd></div>
+          <div><dt>Total rilis</dt><dd id="stat-count">memuat…</dd></div>
+          <div><dt>Total unduhan</dt><dd id="stat-downloads-total">memuat…</dd></div>
+        </dl>
       </div>
-      <dl class="hero__stats" id="hero-stats">
-        <div><dt>Versi terbaru</dt><dd id="stat-latest">memuat…</dd></div>
-        <div><dt>Total rilis</dt><dd id="stat-count">memuat…</dd></div>
-        <div><dt>Rilis terakhir</dt><dd id="stat-updated">memuat…</dd></div>
-      </dl>
+      <div class="hero__visual" aria-hidden="true">
+        <canvas id="hero-sphere"></canvas>
+      </div>
     </div>
   </section>
 
@@ -67,6 +72,23 @@
       <h2>Pilih versi</h2>
       <p>Diambil langsung dari <code>registry.npmjs.com/@xayz/baileys</code> setiap kali halaman ini dimuat, jadi daftar di bawah selalu mengikuti rilis terbaru — versi lama tetap tersedia untuk diunduh.</p>
     </div>
+
+    <div class="stats-panel">
+      <div class="stats-panel__head">
+        <div>
+          <p class="stats-panel__label">Unduhan 30 hari terakhir</p>
+          <p class="stats-panel__hint">
+            Total 30 hari dari <code>api.npmjs.org</code>. Badge <code>↓ N /7 hari</code> di tiap
+            kartu versi juga data resmi npm (endpoint per-versi hanya menyimpan 7 hari
+            terakhir) — untuk riwayat lebih panjang per versi, buka
+            <a href="https://npm-stat.com" target="_blank" rel="noopener">npm-stat.com</a> yang tertaut di tiap kartu.
+          </p>
+        </div>
+      </div>
+      <div class="bar-chart" id="downloads-chart" aria-label="Grafik unduhan 30 hari terakhir"></div>
+      <p class="bar-chart__note" id="downloads-chart-note"></p>
+    </div>
+
     <div class="releases__toolbar">
       <input type="search" id="release-search" placeholder="Cari versi… (mis. 6.7 atau latest)" aria-label="Cari versi">
       <span class="badge badge--live" id="live-indicator">
@@ -86,15 +108,21 @@
   <section class="section section--dark" id="browser">
     <div class="section__head">
       <h2>Jelajahi sumber</h2>
-      <p>Pratinjau berkas dari repositori GitHub, lengkap dengan pewarnaan sintaksis. Ini tampilan baca-saja — untuk mengubahnya, gunakan tombol <strong>Edit &amp; Publish</strong> di atas.</p>
+      <p>Pratinjau berkas ala editor kode, lengkap dengan ikon per jenis berkas dan pewarnaan sintaksis. Ini tampilan baca-saja — untuk mengubahnya, gunakan tombol <strong>Edit &amp; Publish</strong> di atas.</p>
     </div>
     <div class="ide">
-      <aside class="ide__tree" id="ide-tree" aria-label="Struktur folder">
-        <p class="ide__loading">Memuat struktur repositori…</p>
+      <aside class="ide__sidebar">
+        <div class="ide__modes">
+          <button class="ide__mode-btn ide__mode-btn--active" data-mode="source">Source</button>
+          <button class="ide__mode-btn" data-mode="releases">Rilis terekstrak</button>
+        </div>
+        <div class="ide__tree" id="ide-tree" aria-label="Struktur folder">
+          <p class="ide__loading">Memuat struktur repositori…</p>
+        </div>
       </aside>
       <div class="ide__main">
         <div class="ide__tabs" id="ide-tabs"></div>
-        <pre class="ide__code"><code id="ide-code-content" class="hljs language-javascript"># Pilih berkas di sebelah kiri untuk melihat isinya.</code></pre>
+        <pre class="ide__code"><code id="ide-code-content" class="hljs"># Pilih berkas di sebelah kiri untuk melihat isinya.</code></pre>
       </div>
     </div>
   </section>
@@ -123,16 +151,16 @@
     </div>
   </section>
 
-  <!-- ============ DEPLOY ============ -->
-  <section class="section section--dark" id="deploy">
+  <!-- ============ FAQ / ABOUT ============ -->
+  <section class="section section--dark" id="faq">
     <div class="section__head">
       <h2>Siapa Pembuatnya?</h2>
       <p>Dibuat Oleh XYCoolcraft.</p>
     </div>
     <div class="deploy-grid">
       <article class="deploy-card">
-        <h3>GitHub Pages</h3>
-        <p>Push folder ini ke branch <code>gh-pages</code> atau aktifkan Pages dari branch <code>main</code>.</p>
+        <h3>Apakah ini open source?</h3>
+        <p>Iya, dan tentu saja bisa di-rename, di-rebrand, dll.</p>
         <code class="deploy-card__cmd">git push origin main</code>
       </article>
       <article class="deploy-card">
@@ -153,6 +181,7 @@
 </main>
 
 <footer class="footer">
+  <div class="social-links" id="social-links" aria-label="Tautan sosial media"></div>
   <p>Created By: XYCoolcraft</p>
 </footer>
 
@@ -167,15 +196,12 @@
   </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/javascript.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/typescript.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/json.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/bash.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/yaml.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/markdown.min.js"></script>
+<script src="assets/vendor/highlightjs/highlight.min.js"></script>
 <script src="assets/js/config.js"></script>
+<script src="assets/js/file-icons.js"></script>
 <script src="assets/js/particles.js"></script>
+<script src="assets/js/particle-sphere.js"></script>
+<script src="assets/js/download-stats.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/editor-redirect.js"></script>
 </body>

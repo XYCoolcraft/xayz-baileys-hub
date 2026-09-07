@@ -1,0 +1,55 @@
+name: Extract release into @xayz/baileys/
+
+# Menjalankan scripts/download-all.sh untuk mengunduh & mengekstrak SETIAP
+# versi dari registry.npmjs.com ke folder terekstrak (mis. "@xayz/baileys/<versi>/")
+# di repo ini, lalu meng-commit folder-folder baru itu. Versi yang sudah
+# pernah diekstrak akan dilewati (download-all.sh idempotent).
+#
+# Dengan ini, folder "Rilis terekstrak" di panel "Jelajahi sumber" pada
+# situs, dan tombol "Open in GitHub" pada tiap versi, menunjuk ke berkas
+# sungguhan yang sudah diekstrak — bukan tautan kosong.
+#
+# CATATAN: setiap versi paket menambah ukuran repo. Jika paket Anda besar
+# atau punya banyak rilis, pertimbangkan Git LFS atau batasi jumlah versi
+# yang diekstrak (edit scripts/download-all.sh sesuai kebutuhan).
+
+on:
+  workflow_run:
+    workflows: ["Track npm release"]
+    types: [completed]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  extract:
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node.js v20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Download & extract every version
+        run: bash scripts/download-all.sh
+        env:
+          NPM_PACKAGE: "@xayz/baileys"
+
+      - name: Commit newly extracted versions (if any)
+        run: |
+          git config user.name "xayz-web-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add "@xayz/baileys"
+          if git diff --cached --quiet; then
+            echo "Tidak ada versi baru untuk diekstrak."
+          else
+            git commit -m "chore: extract new @xayz/baileys version(s) [skip ci]"
+            git push
+          fi

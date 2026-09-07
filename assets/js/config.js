@@ -24,4 +24,21 @@ window.XAYZ_CONFIG = {
 
   // Berapa lama (ms) mencoba membuka VS Code lokal sebelum jatuh ke fallback berikutnya.
   vscodeUriTimeoutMs: 1600,
+
+  // Path folder di dalam repo GitHub yang berisi hasil ekstraksi tiap versi
+  // (diisi otomatis oleh .github/workflows/extract-release.yml + scripts/download-all.sh).
+  releasesFolderPath: "@xayz/baileys",
+
+  // Endpoint publik npm untuk statistik unduhan (tanpa API key).
+  npmDownloadsApiBase: "https://api.npmjs.org/downloads",
+
+  // Tautan sosial media & profil. Isi urlWhatsapp sendiri saat sudah siap.
+  social: {
+    telegramContact: "https://t.me/XYCoolcrafts",
+    telegramChannel: "https://t.me/XayTeam",
+    youtube: "https://youtube.com/@XYCoolcraft",
+    whatsappChannel: "https://whatsapp.com/channel/0029Vb8bNEvIiRp1J71Flc06", // TODO: isi URL channel WhatsApp Anda di sini
+    github: "https://github.com/XYCoolcraft",
+    npm: "https://www.npmjs.com/~xycoolcraft",
+  },
 };

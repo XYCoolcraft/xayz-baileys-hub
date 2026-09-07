@@ -4,9 +4,6 @@
   "private": true,
   "description": "Etalase statis (release hub) untuk @xayz/baileys — Node.js v24, CommonJS.",
   "type": "commonjs",
-  "engines": {
-    "node": ">=20"
-  },
   "scripts": {
     "start": "node server.js",
     "track-versions": "node scripts/fetch-versions.js"
