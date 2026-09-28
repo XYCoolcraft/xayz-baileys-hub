@@ -1,8 +1,14 @@
 {
   "package": "@xayz/baileys",
-  "latest": "6.1.7",
-  "fetchedAt": "2026-09-27T23:03:44.810Z",
+  "latest": "6.1.8",
+  "fetchedAt": "2026-09-28T01:34:23.477Z",
   "versions": [
+    {
+      "version": "6.1.8",
+      "date": "2026-09-28T00:15:14.706Z",
+      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.1.8.tgz",
+      "shasum": "cfbf6d9e8835f53d774346167824db0801051ffd"
+    },
     {
       "version": "6.1.7",
       "date": "2026-09-20T23:41:18.967Z",
