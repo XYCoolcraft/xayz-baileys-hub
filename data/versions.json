@@ -1,139 +1,19 @@
 {
   "package": "@xayz/baileys",
-  "latest": "6.1.9",
-  "fetchedAt": "2026-10-08T09:22:29.909Z",
+  "latest": "0.0.1-security",
+  "fetchedAt": "2026-10-08T16:39:22.918Z",
   "versions": [
     {
-      "version": "6.1.9",
-      "date": "2026-10-03T22:16:10.052Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.1.9.tgz",
-      "shasum": "ad142ee564642479df96f9b56551d3035aae1dc0"
+      "version": "0.0.1-security",
+      "date": "2026-10-08T13:32:24.646Z",
+      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-0.0.1-security.tgz",
+      "shasum": "c268ec4bf7d2928e3c60c3278c48b72fa1f2b9b4"
     },
     {
-      "version": "6.1.8",
-      "date": "2026-09-28T00:15:14.706Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.1.8.tgz",
-      "shasum": "cfbf6d9e8835f53d774346167824db0801051ffd"
-    },
-    {
-      "version": "6.1.7",
-      "date": "2026-09-20T23:41:18.967Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.1.7.tgz",
-      "shasum": "eb734e49153dbda2b9b3e8039f1116dece08cab6"
-    },
-    {
-      "version": "6.1.4",
-      "date": "2026-09-07T22:26:55.680Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.1.4.tgz",
-      "shasum": "f2f3f710a35cddb0d3b83cc28256689755d38ecd"
-    },
-    {
-      "version": "6.1.3",
-      "date": "2026-09-07T22:21:45.328Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.1.3.tgz",
-      "shasum": "678f4f724a39cb8859cacca2bbee03cfa8b00ef1"
-    },
-    {
-      "version": "6.1.2",
-      "date": "2026-09-07T21:17:05.416Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.1.2.tgz",
-      "shasum": "16b9928090e140d6798ed3e5ef70476474e57ec6"
-    },
-    {
-      "version": "6.1.1",
-      "date": "2026-09-07T09:24:19.396Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.1.1.tgz",
-      "shasum": "922cbd9d92eca4353064cbae1f0a1bf88acf77d2"
-    },
-    {
-      "version": "6.1.0",
-      "date": "2026-09-06T03:03:30.197Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.1.0.tgz",
-      "shasum": "24ac78e75444e3a006bdd5a706ff81a41638d23a"
-    },
-    {
-      "version": "6.0.75",
-      "date": "2026-09-04T23:52:22.846Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.0.75.tgz",
-      "shasum": "6823e1c74d019976b19cbaae33f1c2609c1b45ff"
-    },
-    {
-      "version": "6.0.7",
-      "date": "2026-09-03T22:26:16.638Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.0.7.tgz",
-      "shasum": "0fe061914efc6869fbe26bf123fbcbf3dc86f54e"
-    },
-    {
-      "version": "6.0.6",
-      "date": "2026-09-03T00:42:27.635Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.0.6.tgz",
-      "shasum": "f5c052032c67e2369c0bbe8ade8c9cd76af18ddf"
-    },
-    {
-      "version": "6.0.5",
-      "date": "2026-09-01T12:42:03.219Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.0.5.tgz",
-      "shasum": "24ce0564b4c87caa2d6bbaf8a4d973c7e5ae4300"
-    },
-    {
-      "version": "6.0.4",
-      "date": "2026-08-29T20:57:39.646Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.0.4.tgz",
-      "shasum": "277e827a222aed8f539a8ee7795c12bac619c030"
-    },
-    {
-      "version": "6.0.3",
-      "date": "2026-08-29T14:14:06.997Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.0.3.tgz",
-      "shasum": "5cf3a030709218d06397ff1db80467a7bee8e726"
-    },
-    {
-      "version": "6.0.2",
-      "date": "2026-08-27T12:44:15.793Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.0.2.tgz",
-      "shasum": "6bb1715cccf7b1925b5fb5d74ced89b8bcaffeab"
-    },
-    {
-      "version": "6.0.1",
-      "date": "2026-08-27T11:29:38.410Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.0.1.tgz",
-      "shasum": "0c8d1d8ffa9e9f987901f0fab7479fcf572767d7"
-    },
-    {
-      "version": "6.0.0",
-      "date": "2026-08-16T11:19:46.486Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-6.0.0.tgz",
-      "shasum": "d6c8aa74facf6e069129e77f43e89c9833b3d42c"
-    },
-    {
-      "version": "5.0.0",
-      "date": "2026-08-16T10:47:47.831Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-5.0.0.tgz",
-      "shasum": "c5533b23f314452adfd7f67f80559b5ce98e27cd"
-    },
-    {
-      "version": "4.0.0",
-      "date": "2026-08-16T10:39:25.180Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-4.0.0.tgz",
-      "shasum": "d3868a470ec8ea9a1d4751453ea7396f95e0f645"
-    },
-    {
-      "version": "3.0.0",
-      "date": "2026-08-16T07:54:54.312Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-3.0.0.tgz",
-      "shasum": "ab4fdb0bc070be3197f1d63429f49c7d568107a5"
-    },
-    {
-      "version": "2.0.0",
-      "date": "2026-08-16T07:52:06.518Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-2.0.0.tgz",
-      "shasum": "ce6f268b71aad8bc3658fd26bf12059a9d0144ba"
-    },
-    {
-      "version": "1.0.0",
-      "date": "2026-08-16T07:15:18.973Z",
-      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-1.0.0.tgz",
-      "shasum": "0f578f663d729bf3898df91953d900e806af352a"
+      "version": "0.0.0-stage",
+      "date": "2026-10-08T13:30:47.755Z",
+      "tarball": "https://registry.npmjs.org/@xayz/baileys/-/baileys-0.0.0-stage.tgz",
+      "shasum": "f70a280daa9e2e687266a80db2efc285418d9079"
     }
   ]
 }
